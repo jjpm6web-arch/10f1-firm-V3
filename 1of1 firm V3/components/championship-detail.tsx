@@ -35,25 +35,25 @@ function CountdownTimer({ targetDate }: { targetDate: Date }) {
   }, [targetDate])
 
   return (
-    <div className="flex items-center gap-3 md:gap-6">
-      <div className="text-center">
-        <div className="text-2xl md:text-4xl font-light text-white">{String(timeLeft.days).padStart(2, "0")}</div>
-        <div className="text-[8px] md:text-[10px] tracking-widest text-red-500">DÍAS</div>
+    <div className="flex items-center gap-1.5 xs:gap-2 sm:gap-3 md:gap-6">
+      <div className="text-center min-w-[28px] xs:min-w-[32px]">
+        <div className="text-lg xs:text-xl sm:text-2xl md:text-4xl font-light text-white">{String(timeLeft.days).padStart(2, "0")}</div>
+        <div className="text-[6px] xs:text-[7px] sm:text-[8px] md:text-[10px] tracking-widest text-red-500">DÍAS</div>
       </div>
-      <div className="text-white/30 text-lg md:text-2xl font-light">|</div>
-      <div className="text-center">
-        <div className="text-2xl md:text-4xl font-light text-white">{String(timeLeft.hours).padStart(2, "0")}</div>
-        <div className="text-[8px] md:text-[10px] tracking-widest text-red-500">HORAS</div>
+      <div className="text-white/30 text-sm xs:text-base sm:text-lg md:text-2xl font-light">|</div>
+      <div className="text-center min-w-[28px] xs:min-w-[32px]">
+        <div className="text-lg xs:text-xl sm:text-2xl md:text-4xl font-light text-white">{String(timeLeft.hours).padStart(2, "0")}</div>
+        <div className="text-[6px] xs:text-[7px] sm:text-[8px] md:text-[10px] tracking-widest text-red-500">HORAS</div>
       </div>
-      <div className="text-white/30 text-lg md:text-2xl font-light">|</div>
-      <div className="text-center">
-        <div className="text-2xl md:text-4xl font-light text-white">{String(timeLeft.minutes).padStart(2, "0")}</div>
-        <div className="text-[8px] md:text-[10px] tracking-widest text-red-500">MIN</div>
+      <div className="text-white/30 text-sm xs:text-base sm:text-lg md:text-2xl font-light">|</div>
+      <div className="text-center min-w-[28px] xs:min-w-[32px]">
+        <div className="text-lg xs:text-xl sm:text-2xl md:text-4xl font-light text-white">{String(timeLeft.minutes).padStart(2, "0")}</div>
+        <div className="text-[6px] xs:text-[7px] sm:text-[8px] md:text-[10px] tracking-widest text-red-500">MIN</div>
       </div>
-      <div className="text-white/30 text-lg md:text-2xl font-light">|</div>
-      <div className="text-center">
-        <div className="text-2xl md:text-4xl font-light text-white">{String(timeLeft.seconds).padStart(2, "0")}</div>
-        <div className="text-[8px] md:text-[10px] tracking-widest text-red-500">SEG</div>
+      <div className="text-white/30 text-sm xs:text-base sm:text-lg md:text-2xl font-light">|</div>
+      <div className="text-center min-w-[28px] xs:min-w-[32px]">
+        <div className="text-lg xs:text-xl sm:text-2xl md:text-4xl font-light text-white">{String(timeLeft.seconds).padStart(2, "0")}</div>
+        <div className="text-[6px] xs:text-[7px] sm:text-[8px] md:text-[10px] tracking-widest text-red-500">SEG</div>
       </div>
     </div>
   )
@@ -139,16 +139,16 @@ export default function ChampionshipDetail({ onNavigate }: ChampionshipDetailPro
       </section>
 
       {/* Countdown Section */}
-      <section className="px-4 py-6 max-w-2xl mx-auto">
-        <div className="bg-black/60 border border-white/10 rounded-lg p-4 flex flex-col md:flex-row items-center gap-4">
-          <div className="flex items-center gap-3 shrink-0">
-            <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center">
-              <Clock className="w-5 h-5 text-white/60" />
+      <section className="px-2 sm:px-4 py-6 max-w-2xl mx-auto">
+        <div className="bg-black/60 border border-white/10 rounded-lg p-3 sm:p-4 flex flex-col md:flex-row items-center gap-3 sm:gap-4">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/20 flex items-center justify-center">
+              <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-white/60" />
             </div>
             <div>
-              <span className="text-[10px] tracking-wider text-white/60 block">FALTA PARA</span>
-              <span className="text-xs tracking-wider text-white">THE 1 OF 1</span>
-              <span className="text-xs tracking-wider text-white block">CHAMPIONSHIP</span>
+              <span className="text-[8px] sm:text-[10px] tracking-wider text-white/60 block">FALTA PARA</span>
+              <span className="text-[10px] sm:text-xs tracking-wider text-white">THE 1 OF 1</span>
+              <span className="text-[10px] sm:text-xs tracking-wider text-white block">CHAMPIONSHIP</span>
             </div>
           </div>
           <div className="md:border-l md:border-white/20 md:pl-4 w-full flex justify-center md:justify-start">
@@ -158,79 +158,79 @@ export default function ChampionshipDetail({ onNavigate }: ChampionshipDetailPro
       </section>
 
       {/* Pricing Section */}
-      <section className="px-4 py-6 max-w-lg mx-auto">
+      <section className="px-2 sm:px-4 py-6 max-w-lg mx-auto">
         {/* Stage Label */}
-        <div className="flex items-center justify-center gap-4 mb-6">
+        <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6">
           <div className="h-px bg-white/20 flex-1" />
-          <span className="text-white/60 text-xs tracking-[0.2em]">ETAPA CREYENTES</span>
+          <span className="text-white/60 text-[10px] sm:text-xs tracking-[0.15em] sm:tracking-[0.2em]">ETAPA CREYENTES</span>
           <div className="h-px bg-white/20 flex-1" />
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3">
           {/* Full Pass */}
-          <div className="border border-white/20 p-4 text-center">
-            <div className="w-10 h-10 mx-auto mb-3 border border-red-500/50 rounded flex items-center justify-center">
-              <svg className="w-5 h-5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <div className="border border-white/20 p-2 sm:p-4 text-center">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 mx-auto mb-2 sm:mb-3 border border-red-500/50 rounded flex items-center justify-center">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 className="text-white font-medium tracking-wider text-sm mb-1">FULL PASS</h3>
-            <p className="text-white/50 text-[10px] tracking-wider mb-3">ACCESO A LAS 4 FECHAS<br />Y TODOS LOS COMBATES</p>
-            <div className="mb-4">
-              <span className="text-2xl font-light text-red-500">$250.000</span>
-              <span className="text-red-500/60 text-xs ml-1">COP</span>
+            <h3 className="text-white font-medium tracking-wider text-xs sm:text-sm mb-1">FULL PASS</h3>
+            <p className="text-white/50 text-[8px] sm:text-[10px] tracking-wider mb-2 sm:mb-3 leading-tight">ACCESO A LAS 4 FECHAS<br />Y TODOS LOS COMBATES</p>
+            <div className="mb-2 sm:mb-4">
+              <span className="text-lg sm:text-2xl font-light text-red-500">$250.000</span>
+              <span className="text-red-500/60 text-[10px] sm:text-xs ml-1">COP</span>
             </div>
-            <button className="w-full py-2 border border-white/30 text-white text-xs tracking-widest hover:bg-white/10 transition-colors">
+            <button className="w-full py-1.5 sm:py-2 border border-white/30 text-white text-[10px] sm:text-xs tracking-widest hover:bg-white/10 transition-colors">
               COMPRAR
             </button>
           </div>
 
           {/* Fight Pass */}
-          <div className="border border-red-500/50 p-4 text-center">
-            <div className="w-10 h-10 mx-auto mb-3 border border-red-500/50 rounded flex items-center justify-center">
-              <svg className="w-5 h-5 text-red-500" viewBox="0 0 24 24" fill="currentColor">
+          <div className="border border-red-500/50 p-2 sm:p-4 text-center">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 mx-auto mb-2 sm:mb-3 border border-red-500/50 rounded flex items-center justify-center">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 text-red-500" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M7 11V7a5 5 0 0110 0v4m-9 0h8a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2v-6a2 2 0 012-2z" />
               </svg>
             </div>
-            <h3 className="text-white font-medium tracking-wider text-sm mb-1">FIGHT PASS</h3>
-            <p className="text-white/50 text-[10px] tracking-wider mb-3">ACCESO A 1 FECHA<br />Y TODOS LOS COMBATES</p>
-            <div className="mb-4">
-              <span className="text-2xl font-light text-red-500">$100.000</span>
-              <span className="text-red-500/60 text-xs ml-1">COP</span>
+            <h3 className="text-white font-medium tracking-wider text-xs sm:text-sm mb-1">FIGHT PASS</h3>
+            <p className="text-white/50 text-[8px] sm:text-[10px] tracking-wider mb-2 sm:mb-3 leading-tight">ACCESO A 1 FECHA<br />Y TODOS LOS COMBATES</p>
+            <div className="mb-2 sm:mb-4">
+              <span className="text-lg sm:text-2xl font-light text-red-500">$100.000</span>
+              <span className="text-red-500/60 text-[10px] sm:text-xs ml-1">COP</span>
             </div>
-            <button className="w-full py-2 border border-red-500/50 text-red-500 text-xs tracking-widest hover:bg-red-500 hover:text-white transition-colors">
+            <button className="w-full py-1.5 sm:py-2 border border-red-500/50 text-red-500 text-[10px] sm:text-xs tracking-widest hover:bg-red-500 hover:text-white transition-colors">
               COMPRAR
             </button>
           </div>
         </div>
 
         {/* Disclaimer */}
-        <div className="flex items-center justify-center gap-2 mt-4 text-white/40 text-[10px] tracking-wider">
-          <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <div className="flex items-center justify-center gap-1 sm:gap-2 mt-3 sm:mt-4 text-white/40 text-[8px] sm:text-[10px] tracking-wider px-2">
+          <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
             <path d="M7 11V7a5 5 0 0110 0v4" />
           </svg>
-          <span>PRECIOS EXCLUSIVOS ETAPA CREYENTES. POR TIEMPO LIMITADO.</span>
+          <span className="text-center">PRECIOS EXCLUSIVOS ETAPA CREYENTES. POR TIEMPO LIMITADO.</span>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="px-4 py-6">
+      <section className="px-2 sm:px-4 py-6">
         <div
-          className="relative py-8 px-4 overflow-hidden rounded-lg"
+          className="relative py-6 sm:py-8 px-3 sm:px-4 overflow-hidden rounded-lg"
           style={{
             background: "linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%)",
           }}
         >
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div>
-              <p className="text-white text-xl md:text-2xl tracking-wider font-light">LOS CAMPEONES NO NACEN,</p>
-              <p className="text-red-500 text-xl md:text-2xl tracking-wider font-light italic">SE HACEN AQUÍ.</p>
+            <div className="text-center md:text-left">
+              <p className="text-white text-base sm:text-xl md:text-2xl tracking-wider font-light">LOS CAMPEONES NO NACEN,</p>
+              <p className="text-red-500 text-base sm:text-xl md:text-2xl tracking-wider font-light italic">SE HACEN AQUÍ.</p>
             </div>
-            <button className="px-8 py-3 bg-red-600 text-white font-medium tracking-widest hover:bg-red-700 transition-colors flex items-center gap-2">
+            <button className="px-4 sm:px-8 py-2 sm:py-3 bg-red-600 text-white text-xs sm:text-sm font-medium tracking-widest hover:bg-red-700 transition-colors flex items-center gap-2">
               ASEGURA TU LUGAR
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg className="w-3 h-3 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </button>
@@ -239,9 +239,9 @@ export default function ChampionshipDetail({ onNavigate }: ChampionshipDetailPro
       </section>
 
       {/* Trailer Section */}
-      <section className="px-4 py-6">
+      <section className="px-2 sm:px-4 py-6">
         <div
-          className="relative py-8 px-4 overflow-hidden rounded-lg"
+          className="relative py-6 sm:py-8 px-3 sm:px-4 overflow-hidden rounded-lg"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&q=80')`,
             backgroundSize: "cover",
@@ -251,11 +251,11 @@ export default function ChampionshipDetail({ onNavigate }: ChampionshipDetailPro
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/50" />
           <div className="relative z-10 flex items-center justify-between">
             <div>
-              <span className="text-red-500 text-[10px] tracking-widest">REVIVE LA EXPERIENCIA</span>
-              <h3 className="text-2xl md:text-3xl font-bold tracking-wider mt-1 uppercase">THE 1 OF 1 CHAMPIONSHIP</h3>
-              <button className="flex items-center gap-2 mt-3 text-white/80 hover:text-red-500 transition-colors">
-                <Play className="w-4 h-4" />
-                <span className="text-xs tracking-widest">VER TRAILER</span>
+              <span className="text-red-500 text-[8px] sm:text-[10px] tracking-widest">REVIVE LA EXPERIENCIA</span>
+              <h3 className="text-lg sm:text-2xl md:text-3xl font-bold tracking-wider mt-1 uppercase">THE 1 OF 1 CHAMPIONSHIP</h3>
+              <button className="flex items-center gap-2 mt-2 sm:mt-3 text-white/80 hover:text-red-500 transition-colors">
+                <Play className="w-3 h-3 sm:w-4 sm:h-4" />
+                <span className="text-[10px] sm:text-xs tracking-widest">VER TRAILER</span>
               </button>
             </div>
           </div>
@@ -263,22 +263,22 @@ export default function ChampionshipDetail({ onNavigate }: ChampionshipDetailPro
       </section>
 
       {/* Footer */}
-      <footer className="px-4 py-6 flex items-center justify-between border-t border-white/10">
-        <div className="flex items-center gap-4">
+      <footer className="px-2 sm:px-4 py-4 sm:py-6 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 border-t border-white/10">
+        <div className="flex items-center gap-2 sm:gap-4">
           <div className="text-white">
-            <div className="text-lg font-bold tracking-tight">
+            <div className="text-sm sm:text-lg font-bold tracking-tight">
               <span className="text-red-500">1</span>
-              <span className="text-xs align-top mx-0.5">OF</span>
+              <span className="text-[10px] sm:text-xs align-top mx-0.5">OF</span>
               <span className="text-red-500">1</span>
-              <span className="text-xs ml-1">FIRM</span>
+              <span className="text-[10px] sm:text-xs ml-1">FIRM</span>
             </div>
           </div>
           <div>
-            <p className="text-white/60 text-xs">THIS IS NOT FOR EVERYONE.</p>
-            <p className="text-red-500 text-xs tracking-wider">#1UNIQUEEXPERIENCE</p>
+            <p className="text-white/60 text-[10px] sm:text-xs">THIS IS NOT FOR EVERYONE.</p>
+            <p className="text-red-500 text-[10px] sm:text-xs tracking-wider">#1UNIQUEEXPERIENCE</p>
           </div>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 sm:gap-4">
           <a href="#" className="text-white/60 hover:text-red-500 transition-colors">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>

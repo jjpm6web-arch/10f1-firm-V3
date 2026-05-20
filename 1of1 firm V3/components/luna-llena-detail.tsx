@@ -35,22 +35,22 @@ function CountdownTimer({ targetDate }: { targetDate: Date }) {
   }, [targetDate])
 
   return (
-    <div className="flex items-center gap-2 md:gap-6">
-      <div className="text-center">
-        <div className="text-xl md:text-4xl font-light text-white">{String(timeLeft.days).padStart(2, "0")}</div>
-        <div className="text-[8px] md:text-[10px] tracking-widest text-white/60">DÍAS</div>
+    <div className="flex items-center gap-1.5 xs:gap-2 sm:gap-4 md:gap-6">
+      <div className="text-center min-w-[28px] xs:min-w-[32px]">
+        <div className="text-lg xs:text-xl sm:text-2xl md:text-4xl font-light text-white">{String(timeLeft.days).padStart(2, "0")}</div>
+        <div className="text-[6px] xs:text-[7px] sm:text-[8px] md:text-[10px] tracking-widest text-white/60">DÍAS</div>
       </div>
-      <div className="text-center">
-        <div className="text-xl md:text-4xl font-light text-white">{String(timeLeft.hours).padStart(2, "0")}</div>
-        <div className="text-[8px] md:text-[10px] tracking-widest text-white/60">HORAS</div>
+      <div className="text-center min-w-[28px] xs:min-w-[32px]">
+        <div className="text-lg xs:text-xl sm:text-2xl md:text-4xl font-light text-white">{String(timeLeft.hours).padStart(2, "0")}</div>
+        <div className="text-[6px] xs:text-[7px] sm:text-[8px] md:text-[10px] tracking-widest text-white/60">HORAS</div>
       </div>
-      <div className="text-center">
-        <div className="text-xl md:text-4xl font-light text-white">{String(timeLeft.minutes).padStart(2, "0")}</div>
-        <div className="text-[8px] md:text-[10px] tracking-widest text-white/60">MIN</div>
+      <div className="text-center min-w-[28px] xs:min-w-[32px]">
+        <div className="text-lg xs:text-xl sm:text-2xl md:text-4xl font-light text-white">{String(timeLeft.minutes).padStart(2, "0")}</div>
+        <div className="text-[6px] xs:text-[7px] sm:text-[8px] md:text-[10px] tracking-widest text-white/60">MIN</div>
       </div>
-      <div className="text-center">
-        <div className="text-xl md:text-4xl font-light text-white">{String(timeLeft.seconds).padStart(2, "0")}</div>
-        <div className="text-[8px] md:text-[10px] tracking-widest text-white/60">SEG</div>
+      <div className="text-center min-w-[28px] xs:min-w-[32px]">
+        <div className="text-lg xs:text-xl sm:text-2xl md:text-4xl font-light text-white">{String(timeLeft.seconds).padStart(2, "0")}</div>
+        <div className="text-[6px] xs:text-[7px] sm:text-[8px] md:text-[10px] tracking-widest text-white/60">SEG</div>
       </div>
     </div>
   )
@@ -128,85 +128,85 @@ export default function LunaLlenaDetail({ onNavigate }: LunaLlenaDetailProps) {
       </section>
 
       {/* Countdown Section */}
-      <section className="px-4 py-6 max-w-lg mx-auto">
-        <div className="bg-black/60 border border-white/10 rounded-lg p-4 flex items-center gap-4">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center">
-              <Clock className="w-5 h-5 text-white/60" />
+      <section className="px-2 sm:px-4 py-6 max-w-lg mx-auto">
+        <div className="bg-black/60 border border-white/10 rounded-lg p-3 sm:p-4 flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/20 flex items-center justify-center">
+              <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-white/60" />
             </div>
             <div>
-              <span className="text-[10px] tracking-wider text-white/60 block">FALTA PARA</span>
-              <span className="text-xs tracking-wider text-white">LUNA LLENA</span>
+              <span className="text-[8px] sm:text-[10px] tracking-wider text-white/60 block">FALTA PARA</span>
+              <span className="text-[10px] sm:text-xs tracking-wider text-white">LUNA LLENA</span>
             </div>
           </div>
-          <div className="border-l border-white/20 pl-4">
+          <div className="sm:border-l sm:border-white/20 sm:pl-4">
             <CountdownTimer targetDate={targetDate} />
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="px-4 py-6 max-w-lg mx-auto">
+      <section className="px-2 sm:px-4 py-6 max-w-lg mx-auto">
         {/* Stage Label */}
-        <div className="flex items-center justify-center gap-4 mb-6">
+        <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6">
           <div className="h-px bg-white/20 flex-1" />
-          <span className="text-amber-500 text-xs tracking-[0.2em]">ETAPA CREYENTES</span>
+          <span className="text-amber-500 text-[10px] sm:text-xs tracking-[0.15em] sm:tracking-[0.2em]">ETAPA CREYENTES</span>
           <div className="h-px bg-white/20 flex-1" />
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3">
           {/* Ticket */}
-          <div className="border border-white/20 p-4 text-center">
-            <div className="w-10 h-10 mx-auto mb-3 border border-amber-500/50 rounded flex items-center justify-center">
-              <svg className="w-5 h-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <div className="border border-white/20 p-2 sm:p-4 text-center">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 mx-auto mb-2 sm:mb-3 border border-amber-500/50 rounded flex items-center justify-center">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
               </svg>
             </div>
-            <h3 className="text-white font-medium tracking-wider text-sm mb-1">TICKET</h3>
-            <p className="text-white/50 text-[10px] tracking-wider mb-3">ACCESO GENERAL AL EVENTO</p>
-            <div className="mb-4">
-              <span className="text-2xl font-light text-white">$45.000</span>
-              <span className="text-white/60 text-xs ml-1">COP</span>
+            <h3 className="text-white font-medium tracking-wider text-xs sm:text-sm mb-1">TICKET</h3>
+            <p className="text-white/50 text-[8px] sm:text-[10px] tracking-wider mb-2 sm:mb-3">ACCESO GENERAL AL EVENTO</p>
+            <div className="mb-2 sm:mb-4">
+              <span className="text-lg sm:text-2xl font-light text-white">$45.000</span>
+              <span className="text-white/60 text-[10px] sm:text-xs ml-1">COP</span>
             </div>
-            <button className="w-full py-2 border border-white/30 text-white text-xs tracking-widest hover:bg-white/10 transition-colors">
+            <button className="w-full py-1.5 sm:py-2 border border-white/30 text-white text-[10px] sm:text-xs tracking-widest hover:bg-white/10 transition-colors">
               COMPRAR
             </button>
           </div>
 
           {/* VIP */}
-          <div className="border border-amber-500/50 p-4 text-center relative">
-            <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-amber-500 text-black text-[8px] tracking-wider px-2 py-0.5">
+          <div className="border border-amber-500/50 p-2 sm:p-4 text-center relative">
+            <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-amber-500 text-black text-[6px] sm:text-[8px] tracking-wider px-1.5 sm:px-2 py-0.5">
               MÁS VENDIDA
             </div>
-            <div className="w-10 h-10 mx-auto mb-3 border border-amber-500/50 rounded flex items-center justify-center">
-              <svg className="w-5 h-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 mx-auto mb-2 sm:mb-3 border border-amber-500/50 rounded flex items-center justify-center">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
             </div>
-            <h3 className="text-white font-medium tracking-wider text-sm mb-1">MESA VIP</h3>
-            <p className="text-white/50 text-[10px] tracking-wider">10 PERSONAS</p>
-            <p className="text-white/40 text-[8px] tracking-wider mb-3">EXPERIENCIA VIP PARA GRUPOS DE 10 PERSONAS</p>
+            <h3 className="text-white font-medium tracking-wider text-xs sm:text-sm mb-1">MESA VIP</h3>
+            <p className="text-white/50 text-[8px] sm:text-[10px] tracking-wider">10 PERSONAS</p>
+            <p className="text-white/40 text-[6px] sm:text-[8px] tracking-wider mb-2 sm:mb-3 leading-tight">EXPERIENCIA VIP PARA GRUPOS DE 10 PERSONAS</p>
             <div className="mb-1">
-              <span className="text-2xl font-light text-amber-500">$500.000</span>
-              <span className="text-amber-500/60 text-xs ml-1">COP</span>
+              <span className="text-lg sm:text-2xl font-light text-amber-500">$500.000</span>
+              <span className="text-amber-500/60 text-[10px] sm:text-xs ml-1">COP</span>
             </div>
-            <p className="text-white/40 text-[8px] mb-3">NORMALMENTE $700K - $2M</p>
-            <button className="w-full py-2 border border-amber-500/50 text-amber-500 text-xs tracking-widest hover:bg-amber-500 hover:text-black transition-colors">
+            <p className="text-white/40 text-[6px] sm:text-[8px] mb-2 sm:mb-3">NORMALMENTE $700K - $2M</p>
+            <button className="w-full py-1.5 sm:py-2 border border-amber-500/50 text-amber-500 text-[10px] sm:text-xs tracking-widest hover:bg-amber-500 hover:text-black transition-colors">
               COMPRAR
             </button>
           </div>
         </div>
 
         {/* Disclaimer */}
-        <div className="flex items-center justify-center gap-2 mt-4 text-white/40 text-[10px] tracking-wider">
-          <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <div className="flex items-center justify-center gap-1 sm:gap-2 mt-3 sm:mt-4 text-white/40 text-[8px] sm:text-[10px] tracking-wider">
+          <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
             <path d="M7 11V7a5 5 0 0110 0v4" />
           </svg>
           <span>PRECIOS EXCLUSIVOS ETAPA CREYENTES.</span>
         </div>
-        <p className="text-center text-white/40 text-[10px] tracking-wider">POR TIEMPO LIMITADO.</p>
+        <p className="text-center text-white/40 text-[8px] sm:text-[10px] tracking-wider">POR TIEMPO LIMITADO.</p>
       </section>
 
       {/* CTA Section */}
