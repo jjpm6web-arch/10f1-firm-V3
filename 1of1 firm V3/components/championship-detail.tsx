@@ -35,22 +35,25 @@ function CountdownTimer({ targetDate }: { targetDate: Date }) {
   }, [targetDate])
 
   return (
-    <div className="flex items-center gap-2 md:gap-6">
+    <div className="flex items-center gap-3 md:gap-6">
       <div className="text-center">
-        <div className="text-xl md:text-4xl font-light text-white">{String(timeLeft.days).padStart(2, "0")}</div>
-        <div className="text-[8px] md:text-[10px] tracking-widest text-white/60">DÍAS</div>
+        <div className="text-2xl md:text-4xl font-light text-white">{String(timeLeft.days).padStart(2, "0")}</div>
+        <div className="text-[8px] md:text-[10px] tracking-widest text-red-500">DÍAS</div>
       </div>
+      <div className="text-white/30 text-lg md:text-2xl font-light">|</div>
       <div className="text-center">
-        <div className="text-xl md:text-4xl font-light text-white">{String(timeLeft.hours).padStart(2, "0")}</div>
-        <div className="text-[8px] md:text-[10px] tracking-widest text-white/60">HORAS</div>
+        <div className="text-2xl md:text-4xl font-light text-white">{String(timeLeft.hours).padStart(2, "0")}</div>
+        <div className="text-[8px] md:text-[10px] tracking-widest text-red-500">HORAS</div>
       </div>
+      <div className="text-white/30 text-lg md:text-2xl font-light">|</div>
       <div className="text-center">
-        <div className="text-xl md:text-4xl font-light text-white">{String(timeLeft.minutes).padStart(2, "0")}</div>
-        <div className="text-[8px] md:text-[10px] tracking-widest text-white/60">MIN</div>
+        <div className="text-2xl md:text-4xl font-light text-white">{String(timeLeft.minutes).padStart(2, "0")}</div>
+        <div className="text-[8px] md:text-[10px] tracking-widest text-red-500">MIN</div>
       </div>
+      <div className="text-white/30 text-lg md:text-2xl font-light">|</div>
       <div className="text-center">
-        <div className="text-xl md:text-4xl font-light text-white">{String(timeLeft.seconds).padStart(2, "0")}</div>
-        <div className="text-[8px] md:text-[10px] tracking-widest text-white/60">SEG</div>
+        <div className="text-2xl md:text-4xl font-light text-white">{String(timeLeft.seconds).padStart(2, "0")}</div>
+        <div className="text-[8px] md:text-[10px] tracking-widest text-red-500">SEG</div>
       </div>
     </div>
   )
