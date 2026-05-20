@@ -139,9 +139,9 @@ export default function ChampionshipDetail({ onNavigate }: ChampionshipDetailPro
       </section>
 
       {/* Countdown Section */}
-      <section className="px-4 py-6 max-w-lg mx-auto">
+      <section className="px-4 py-6 max-w-2xl mx-auto">
         <div className="bg-black/60 border border-white/10 rounded-lg p-4 flex flex-col md:flex-row items-center gap-4">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 shrink-0">
             <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center">
               <Clock className="w-5 h-5 text-white/60" />
             </div>
@@ -151,7 +151,7 @@ export default function ChampionshipDetail({ onNavigate }: ChampionshipDetailPro
               <span className="text-xs tracking-wider text-white block">CHAMPIONSHIP</span>
             </div>
           </div>
-          <div className="border-l border-white/20 pl-4">
+          <div className="md:border-l md:border-white/20 md:pl-4 w-full flex justify-center md:justify-start">
             <CountdownTimer targetDate={targetDate} />
           </div>
         </div>
