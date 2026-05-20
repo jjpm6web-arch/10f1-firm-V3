@@ -35,22 +35,22 @@ function CountdownTimer({ targetDate }: { targetDate: Date }) {
   }, [targetDate])
 
   return (
-    <div className="flex items-center gap-4 md:gap-6">
+    <div className="flex items-center gap-2 md:gap-6">
       <div className="text-center">
-        <div className="text-3xl md:text-4xl font-light text-white">{String(timeLeft.days).padStart(3, "0")}</div>
-        <div className="text-[10px] tracking-widest text-white/60">DÍAS</div>
+        <div className="text-xl md:text-4xl font-light text-white">{String(timeLeft.days).padStart(3, "0")}</div>
+        <div className="text-[8px] md:text-[10px] tracking-widest text-white/60">DÍAS</div>
       </div>
       <div className="text-center">
-        <div className="text-3xl md:text-4xl font-light text-white">{String(timeLeft.hours).padStart(2, "0")}</div>
-        <div className="text-[10px] tracking-widest text-white/60">HORAS</div>
+        <div className="text-xl md:text-4xl font-light text-white">{String(timeLeft.hours).padStart(2, "0")}</div>
+        <div className="text-[8px] md:text-[10px] tracking-widest text-white/60">HORAS</div>
       </div>
       <div className="text-center">
-        <div className="text-3xl md:text-4xl font-light text-white">{String(timeLeft.minutes).padStart(2, "0")}</div>
-        <div className="text-[10px] tracking-widest text-white/60">MIN</div>
+        <div className="text-xl md:text-4xl font-light text-white">{String(timeLeft.minutes).padStart(2, "0")}</div>
+        <div className="text-[8px] md:text-[10px] tracking-widest text-white/60">MIN</div>
       </div>
       <div className="text-center">
-        <div className="text-3xl md:text-4xl font-light text-white">{String(timeLeft.seconds).padStart(2, "0")}</div>
-        <div className="text-[10px] tracking-widest text-white/60">SEG</div>
+        <div className="text-xl md:text-4xl font-light text-white">{String(timeLeft.seconds).padStart(2, "0")}</div>
+        <div className="text-[8px] md:text-[10px] tracking-widest text-white/60">SEG</div>
       </div>
     </div>
   )

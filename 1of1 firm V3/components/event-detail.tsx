@@ -44,22 +44,22 @@ function CountdownTimer({ targetDate }: { targetDate: Date }) {
           FALTAN PARA<br />BABADOOK 2026
         </div>
       </div>
-      <div className="flex gap-4 md:gap-6">
+      <div className="flex gap-2 md:gap-6">
         <div className="text-center">
-          <div className="text-3xl md:text-4xl font-light text-amber-500">{String(timeLeft.days).padStart(3, '0')}</div>
-          <div className="text-[10px] tracking-wider text-white/50">DÍAS</div>
+          <div className="text-xl md:text-4xl font-light text-amber-500">{String(timeLeft.days).padStart(3, '0')}</div>
+          <div className="text-[8px] md:text-[10px] tracking-wider text-white/50">DÍAS</div>
         </div>
         <div className="text-center">
-          <div className="text-3xl md:text-4xl font-light text-amber-500">{String(timeLeft.hours).padStart(2, '0')}</div>
-          <div className="text-[10px] tracking-wider text-white/50">HORAS</div>
+          <div className="text-xl md:text-4xl font-light text-amber-500">{String(timeLeft.hours).padStart(2, '0')}</div>
+          <div className="text-[8px] md:text-[10px] tracking-wider text-white/50">HORAS</div>
         </div>
         <div className="text-center">
-          <div className="text-3xl md:text-4xl font-light text-amber-500">{String(timeLeft.minutes).padStart(2, '0')}</div>
-          <div className="text-[10px] tracking-wider text-white/50">MIN</div>
+          <div className="text-xl md:text-4xl font-light text-amber-500">{String(timeLeft.minutes).padStart(2, '0')}</div>
+          <div className="text-[8px] md:text-[10px] tracking-wider text-white/50">MIN</div>
         </div>
         <div className="text-center">
-          <div className="text-3xl md:text-4xl font-light text-amber-500">{String(timeLeft.seconds).padStart(2, '0')}</div>
-          <div className="text-[10px] tracking-wider text-white/50">SEG</div>
+          <div className="text-xl md:text-4xl font-light text-amber-500">{String(timeLeft.seconds).padStart(2, '0')}</div>
+          <div className="text-[8px] md:text-[10px] tracking-wider text-white/50">SEG</div>
         </div>
       </div>
     </div>
