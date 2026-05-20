@@ -72,7 +72,7 @@ export default function HamburgerMenu({ isOpen, onClose, onNavigate, currentPage
             {/* HOME */}
             <button
               onClick={() => handleNavigate("home")}
-              className={`block w-full text-2xl md:text-3xl tracking-[0.2em] font-light italic transition-colors ${
+              className={`block w-full text-lg md:text-3xl tracking-[0.2em] font-light italic transition-colors ${
                 currentPage === "home" ? "text-amber-500" : "text-white/90 hover:text-amber-500"
               }`}
             >
@@ -87,7 +87,7 @@ export default function HamburgerMenu({ isOpen, onClose, onNavigate, currentPage
                   currentPage === "events" ? "text-amber-500" : "text-white/90 hover:text-amber-500"
                 }`}
               >
-                <span className="text-xl md:text-2xl tracking-[0.2em] font-light italic">SIGNATURE EVENTS</span>
+                <span className="text-base md:text-2xl tracking-[0.2em] font-light italic">SIGNATURE EVENTS</span>
                 {expandedSection === "events" ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
               </button>
               {expandedSection === "events" && (
@@ -122,7 +122,7 @@ export default function HamburgerMenu({ isOpen, onClose, onNavigate, currentPage
                 onClick={() => toggleSection("universe")}
                 className="flex items-center justify-center gap-3 mx-auto text-white/90 hover:text-amber-500 transition-colors"
               >
-                <span className="text-xl md:text-2xl tracking-[0.2em] font-light italic">1 OF 1 UNIVERSE</span>
+                <span className="text-base md:text-2xl tracking-[0.2em] font-light italic">1 OF 1 UNIVERSE</span>
                 {expandedSection === "universe" ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
               </button>
               {expandedSection === "universe" && (
@@ -147,7 +147,7 @@ export default function HamburgerMenu({ isOpen, onClose, onNavigate, currentPage
 
             {/* BUY TICKETS */}
             <button
-              className="block w-full text-2xl md:text-3xl tracking-[0.2em] text-amber-500 font-light italic hover:text-amber-400 transition-colors"
+              className="block w-full text-lg md:text-3xl tracking-[0.2em] text-amber-500 font-light italic hover:text-amber-400 transition-colors"
             >
               BUY TICKETS
             </button>
@@ -159,7 +159,7 @@ export default function HamburgerMenu({ isOpen, onClose, onNavigate, currentPage
 
             {/* CONTACT */}
             <button
-              className="block w-full text-2xl md:text-3xl tracking-[0.2em] text-white font-light italic hover:text-amber-500 transition-colors"
+              className="block w-full text-lg md:text-3xl tracking-[0.2em] text-white font-light italic hover:text-amber-500 transition-colors"
             >
               CONTACT
             </button>
