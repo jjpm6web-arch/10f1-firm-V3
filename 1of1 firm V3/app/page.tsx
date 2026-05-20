@@ -8,9 +8,10 @@ import LunaLlenaDetail from "@/components/luna-llena-detail"
 import LaFestaDetail from "@/components/la-festa-detail"
 import AnimalDetail from "@/components/animal-detail"
 import CelestialDetail from "@/components/celestial-detail"
+import ChampionshipDetail from "@/components/championship-detail"
 
 export default function Home() {
-  const [currentPage, setCurrentPage] = useState<"home" | "events" | "babadook" | "luna-llena" | "la-festa" | "animal" | "celestial">("home")
+  const [currentPage, setCurrentPage] = useState<"home" | "events" | "babadook" | "luna-llena" | "la-festa" | "animal" | "celestial" | "championship">("home")
 
   const handleNavigate = (page: string) => {
     if (page === "events") {
@@ -25,6 +26,8 @@ export default function Home() {
       setCurrentPage("animal")
     } else if (page === "celestial") {
       setCurrentPage("celestial")
+    } else if (page === "championship") {
+      setCurrentPage("championship")
     } else {
       setCurrentPage("home")
     }
@@ -66,6 +69,14 @@ export default function Home() {
     return (
       <div>
         <CelestialDetail onNavigate={handleNavigate} />
+      </div>
+    )
+  }
+
+  if (currentPage === "championship") {
+    return (
+      <div>
+        <ChampionshipDetail onNavigate={handleNavigate} />
       </div>
     )
   }

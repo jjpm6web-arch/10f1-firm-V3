@@ -220,7 +220,8 @@ export default function SignatureEvents({ onNavigate }: SignatureEventsProps) {
       vipNote: "NORMALMENTE $700K - $2M",
     },
     {
-      image: "https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600&q=80",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20260508-WA0017-YwMbfrkrqjyhVIH2uNgMkCyUZ9Bic3.jpg",
+      id: "championship",
       title: "THE 1 OF 1 CHAMPIONSHIP",
       subtitle: "TORNEO DE ARTES MARCIALES",
       comingSoon: true,
